@@ -23,6 +23,18 @@ class UserService {
 
 	return "Usuario creado";
     }
+
+    updateUserById(id, data) {
+	let index = this.getIndex(id);
+
+	userData[index].userName = data.userName;
+	userData[index].name  = data.name;
+	userData[index].email = data.email;
+	userData[index].createDate = data.createDate;
+	userData[index].password = data.password;
+
+	return "Usuario actualizado";
+    }
 }
 
 module.exports = new UserService();

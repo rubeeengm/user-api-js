@@ -23,6 +23,14 @@ class UserController {
 	    )
 	);
     }
+
+    async updateUserById(req, res) {
+	await res.json(
+	    userService.updateUserById(
+		req.params.id, req.body
+	    )
+	);
+    }
 }
 
 module.exports = new UserController();
