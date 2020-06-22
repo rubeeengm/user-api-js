@@ -35,6 +35,14 @@ class UserService {
 
 	return "Usuario actualizado";
     }
+
+    deleteUserById(id) {
+	let index = this.getIndex(id);
+
+	userData.splice(index, 1);
+
+	return "Usuario Eliminado";
+    }
 }
 
 module.exports = new UserService();

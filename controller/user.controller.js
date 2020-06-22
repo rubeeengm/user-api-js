@@ -31,6 +31,14 @@ class UserController {
 	    )
 	);
     }
+
+    async deleteUserById(req, res) {
+	await res.json(
+	    userService.deleteUserById(
+		req.params.id
+	    )
+	);
+    }
 }
 
 module.exports = new UserController();
